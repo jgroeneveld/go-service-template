@@ -2,19 +2,24 @@ package main
 
 import (
 	"fmt"
-	"net/http"
+	"github.com/jgroeneveld/go-cloud-run-template/app"
+	"os"
 )
 
-func handler(w http.ResponseWriter, r *http.Request) {
-	fmt.Fprint(w, "Hi")
-}
-
 func main() {
-	fmt.Println("Hello World")
+	port := getEnvOrDefault("PORT", "8080")
 
-	http.HandleFunc("/", handler)
+	fmt.Printf("Starting server on port %s\n", port)
 
-	if err := http.ListenAndServe(":8080", nil); err != nil {
+	if err := app.StartServer(port); err != nil {
 		panic(err)
 	}
+}
+
+func getEnvOrDefault(key string, fallback string) string {
+	value := os.Getenv(key)
+	if value == "" {
+		value = fallback
+	}
+	return value
 }
