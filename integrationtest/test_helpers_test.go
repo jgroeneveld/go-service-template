@@ -1,4 +1,4 @@
-package app
+package integrationtest
 
 import (
 	"github.com/jgroeneveld/schema"

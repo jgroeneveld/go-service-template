@@ -7,7 +7,7 @@ import (
 )
 
 func StartServer(port string) error {
-	router := routes()
+	router := Routes()
 
 	if err := http.ListenAndServe(":"+port, router); err != nil {
 		panic(err)
@@ -15,7 +15,7 @@ func StartServer(port string) error {
 	return nil
 }
 
-func routes() *chi.Mux {
+func Routes() *chi.Mux {
 	router := chi.NewRouter()
 
 	router.Use(middleware.RequestID)

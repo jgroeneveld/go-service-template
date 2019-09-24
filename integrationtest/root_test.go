@@ -1,14 +1,15 @@
-package app
+package integrationtest
 
 import (
+	"github.com/jgroeneveld/go-cloud-run-template/app"
 	"github.com/jgroeneveld/schema"
 	"github.com/jgroeneveld/trial/assert"
 	"net/http"
 	"testing"
 )
 
-func TestRootResponse(t *testing.T) {
-	server := routes()
+func TestRoot(t *testing.T) {
+	server := app.Routes()
 
 	response := Get(server, "/")
 
