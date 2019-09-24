@@ -1,6 +1,7 @@
 package app
 
 import (
+	"github.com/jgroeneveld/schema"
 	"io"
 	"net/http"
 	"net/http/httptest"
@@ -14,6 +15,17 @@ func TestServer(t *testing.T) {
 	if status := response.Code; status != http.StatusOK {
 		t.Errorf("actual: %v expected: %v", status, http.StatusOK)
 	}
+
+	err := schema.MatchJSON(
+		schema.Map{
+			"Foo": "Hello World",
+		},
+		response.Body,
+	)
+	if err != nil {
+		t.Errorf("could not match json, %v", err)
+	}
+
 }
 
 func Get(server http.Handler, url string) *httptest.ResponseRecorder {
