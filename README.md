@@ -2,6 +2,8 @@
 
 Simple template prepared to be used for services running via google cloud run using go and minimal docker image.
 
+Final image size is < 8mb.
+
 ## Usage
 
 - Adjust the module in `go.mod`
