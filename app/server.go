@@ -1,7 +1,6 @@
 package app
 
 import (
-	"fmt"
 	"github.com/go-chi/chi"
 	"github.com/go-chi/chi/middleware"
 	"net/http"
@@ -27,11 +26,4 @@ func routes() *chi.Mux {
 	router.Get("/", rootHandler)
 
 	return router
-}
-
-func rootHandler(w http.ResponseWriter, r *http.Request) {
-	_, err := fmt.Fprint(w, "Hello World")
-	if err != nil {
-		panic(err)
-	}
 }
