@@ -20,3 +20,9 @@ func WriteJson(w http.ResponseWriter, v interface{}) error {
 
 	return nil
 }
+
+func PanicIf(err error) {
+	if err != nil {
+		panic(err)
+	}
+}

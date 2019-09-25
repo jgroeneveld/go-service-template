@@ -7,13 +7,16 @@ import (
 	"testing"
 )
 
-func TestRoot(t *testing.T) {
+func TestPosts(t *testing.T) {
 	router := NewTestSetup().Router()
 
-	response := Get(router, "/")
+	response := Get(router, "/posts/12")
 
 	assert.MustBeEqual(t, http.StatusOK, response.Code)
 	assert.JSONSchema(t, response.Body, schema.Map{
-		"Foo": "Hello World",
+		"user_id": 42,
+		"id":      12,
+		"title":   "fake title",
+		"body":    "fake body",
 	})
 }

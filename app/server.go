@@ -7,7 +7,9 @@ import (
 )
 
 func StartServer(port string) error {
-	router := Routes()
+	foobarApi := NewThirdPartyPostsApiClient()
+
+	router := Router(foobarApi)
 
 	if err := http.ListenAndServe(":"+port, router); err != nil {
 		panic(err)
@@ -15,7 +17,7 @@ func StartServer(port string) error {
 	return nil
 }
 
-func Routes() *chi.Mux {
+func Router(foobarApi ThirdPartyPostsApi) *chi.Mux {
 	router := chi.NewRouter()
 
 	router.Use(middleware.RequestID)
@@ -24,6 +26,7 @@ func Routes() *chi.Mux {
 	router.Use(middleware.Recoverer)
 
 	router.Get("/", rootHandler)
+	router.Get("/posts/{postID}", getPostHandler(foobarApi))
 
 	return router
 }
