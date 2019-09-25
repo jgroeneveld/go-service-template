@@ -6,13 +6,36 @@ Final image size is < 8mb.
 
 ## Usage
 
+- Copy repo contents
 - Adjust the module in `go.mod`
-- Build with docker
 
-      docker build -t go-cloud-run-template .
-      docker run -p 9000:8080 go-cloud-run-template
+## Build and run with docker
+
+      make docker-build docker-run
       http :9000/
+      
+## Publish to google cloud run
+
+TODO
+
+## Development
+
+Run tests
+
+      make test
+
+Use `https://github.com/codegangsta/gin` to watch changes
+
+      go get github.com/codegangsta/gin
+      make start
 
 ## Decisions
 
+### Server
+
 - `go-chi` for routing
+
+### Testing
+
+- `trial` for assertions
+- `schema` for json matching

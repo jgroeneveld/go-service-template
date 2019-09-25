@@ -16,4 +16,3 @@ func rootHandler(w http.ResponseWriter, r *http.Request) {
 type RootHandlerResponse struct {
 	Foo string
 }
-
