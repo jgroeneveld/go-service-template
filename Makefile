@@ -1,4 +1,4 @@
-PROJECTNAME := $(shell basename "$(PWD)")
+PROJECTNAME := $(shell basename "$(shell pwd)")
 
 test:
 	go test ./...
