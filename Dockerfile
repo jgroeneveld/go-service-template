@@ -1,7 +1,6 @@
 # Accept the Go version for the image to be set as a build argument.
 ARG GO_VERSION=1.12.8
 
-
 # First stage: build the executable.
 # =====================================
 FROM golang:${GO_VERSION}-alpine AS builder
@@ -18,16 +17,16 @@ RUN mkdir /user && \
 RUN apk add --no-cache ca-certificates git
 
 # Set the working directory outside $GOPATH to enable the support for modules.
-WORKDIR /src
+WORKDIR /project
 
 # Fetch dependencies first; they are less susceptible to change on every build
 # and will therefore be cached for speeding up the next build
-COPY go.mod ./
-COPY go.sum ./
+COPY src/go.mod ./
+COPY src/go.sum ./
 RUN go mod download
 
 # Import the code from the context.
-COPY ./ ./
+COPY ./src ./
 
 # Build the executable to `/app`. Mark the build as statically linked.
 RUN CGO_ENABLED=0 go build \

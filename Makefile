@@ -1,10 +1,14 @@
 PROJECTNAME := $(shell basename "$(shell pwd)")
+GIN := ~/go/bin/gin
 
 test:
-	go test ./...
+	@cd src && go test ./...
 
 start:
-	~/go/bin/gin --bin bin/gin-bin run main.go
+	@cd src && $(GIN) --bin ../bin/gin-bin run main.go
+
+clean:
+	rm ./bin/*
 
 docker-build:
 	docker build -t $(PROJECTNAME) .

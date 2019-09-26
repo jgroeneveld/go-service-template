@@ -1,0 +1,16 @@
+github.com/go-chi/chi v4.0.2+incompatible h1:maB6vn6FqCxrpz4FqWdh4+lwpyZIQS7YEAUcHlgXVRs=
+github.com/go-chi/chi v4.0.2+incompatible/go.mod h1:eB3wogJHnLi3x/kFX2A+IbTBlXxmMeXJVKy9tTv1XzQ=
+github.com/jgroeneveld/schema v0.0.0-20190924080149-c9395f354dc9 h1:bHYmLBG+5vwi72FP0aJwe5rxZUgut7MhqsD/r9n3PEE=
+github.com/jgroeneveld/schema v0.0.0-20190924080149-c9395f354dc9/go.mod h1:M14lv7sNMtGvo3ops1MwslaSYgDYxrSmbzWIQ0Mr5rs=
+github.com/jgroeneveld/trial v0.0.0-20180824072721-4f091f384a99 h1:PUdsFJCL3QlXk93paqFWkQ/qMag2Pnmi1Y1IUH60BuA=
+github.com/jgroeneveld/trial v0.0.0-20180824072721-4f091f384a99/go.mod h1:I6INLW96EN8WysNBXUFI3M4RIC8ePg9ntAc/Wy+U/+M=
+github.com/jgroeneveld/trial v0.0.0-20190924182641-3b37865cf5a4 h1:gZ/dP3wcpU7KQDTCS4adCljBOVx78h67dMu0vjqW09U=
+github.com/jgroeneveld/trial v0.0.0-20190924182641-3b37865cf5a4/go.mod h1:I6INLW96EN8WysNBXUFI3M4RIC8ePg9ntAc/Wy+U/+M=
+github.com/jgroeneveld/trial v0.0.0-20190924190115-ad6b10ed9859 h1:7bGQhtC9TPkr8G5k/BMqNL739MD0ImgRJ+S+u4OVhSs=
+github.com/jgroeneveld/trial v0.0.0-20190924190115-ad6b10ed9859/go.mod h1:I6INLW96EN8WysNBXUFI3M4RIC8ePg9ntAc/Wy+U/+M=
+golang.org/x/crypto v0.0.0-20190308221718-c2843e01d9a2/go.mod h1:djNgcEr1/C05ACkg1iLfiJU5Ep61QUkGW8qpdssI0+w=
+golang.org/x/net v0.0.0-20190923162816-aa69164e4478 h1:l5EDrHhldLYb3ZRHDUhXF7Om7MvYXnkV9/iQNo1lX6g=
+golang.org/x/net v0.0.0-20190923162816-aa69164e4478/go.mod h1:z5CRVTTTmAJ677TzLLGU+0bjPO0LkuOLi4/5GtJWs/s=
+golang.org/x/sys v0.0.0-20190215142949-d0b11bdaac8a/go.mod h1:STP8DvDyc/dI5b8T5hshtkjS+E42TnysNCUPdjciGhY=
+golang.org/x/text v0.3.0 h1:g61tztE5qeGQ89tm6NTjjM9VPIm088od1l6aSorWRWg=
+golang.org/x/text v0.3.0/go.mod h1:NqM8EUOU14njkJ3fqMW+pc6Ldnwhi/IjpwHt7yyuwOQ=
