@@ -2,7 +2,7 @@ package main
 
 import (
 	"fmt"
-	"github.com/jgroeneveld/go-cloud-run-template/src/app"
+	"go-cloud-run-template/app"
 	"os"
 )
 

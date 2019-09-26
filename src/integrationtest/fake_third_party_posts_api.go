@@ -1,7 +1,7 @@
 package integrationtest
 
 import (
-	"github.com/jgroeneveld/go-cloud-run-template/src/app"
+	"go-cloud-run-template/app"
 )
 
 type FakeThirdPartyPostsApi struct {

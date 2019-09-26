@@ -2,7 +2,7 @@ package integrationtest
 
 import (
 	"github.com/go-chi/chi"
-	"github.com/jgroeneveld/go-cloud-run-template/src/app"
+	"go-cloud-run-template/app"
 )
 
 type TestSetup struct {

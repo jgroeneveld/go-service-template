@@ -1,4 +1,4 @@
-module github.com/jgroeneveld/go-cloud-run-template/src
+module go-cloud-run-template
 
 go 1.12
 
